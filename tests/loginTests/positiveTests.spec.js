@@ -12,5 +12,6 @@ test.describe("Positive Login", () => {
       await page.locator('[data-test="login-button"]').click();
       await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html");
     });
-  }
+  } 
+  //test
 });
