@@ -10,12 +10,39 @@ export const users = [
   { username: "visual_user", password: "secret_sauce" },
 ];
 
-export const nUsers = [
-  { username: "standard_user", password: "59559" },
-  { username: "standard_users", password: "secret_sauce" },
-  { username: "standard_users", password: "fdhfhdufud" },
-  { username: "", password: "secret_sauce" },
-  { username: "error_user", password: "" },
-  { username: "", password: "" },
-  { username: "locked_out_user", password: "secret_sauce" },
+export const negativeUsers = [
+  {
+    username: "standard_user",
+    password: "59559",
+    Message:
+      "Epic sadface: Username and password do not match any user in this service",
+  },
+  {
+    username: "standard_users",
+    password: "secret_sauce",
+    Message:
+      "Epic sadface: Username and password do not match any user in this service",
+  },
+  {
+    username: "standard_users",
+    password: "fdhfhdufud",
+    Message:
+      "Epic sadface: Username and password do not match any user in this service",
+  },
+  {
+    username: "",
+    password: "secret_sauce",
+    Message: "Epic sadface: Username is required",
+  },
+  {
+    username: "error_user",
+    password: "",
+    Message: "Epic sadface: Password is required",
+  },
+  { username: "", password: "", Message: "Epic sadface: Username is required" },
+  {
+    username: "locked_out_user",
+    password: "secret_sauce",
+    Message: "Epic sadface: Sorry, this user has been locked out.",
+  },
 ];
