@@ -2,7 +2,7 @@
 import { expect, test } from "@playwright/test";
 const siteURL = "https://www.saucedemo.com/";
 
-test.describe.only("Sanity", () => {
+test.describe("Sanity", () => {
   test("Sanity Check", async ({ page }) => {
     await page.goto(siteURL);
     await page.locator('[data-test="username"]').fill("standard_user");
