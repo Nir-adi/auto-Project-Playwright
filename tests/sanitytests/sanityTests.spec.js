@@ -17,6 +17,17 @@ test.describe("Sanity-A complete buying experiece", () => {
     await expect(
       page.locator('[data-test="shopping-cart-badge"]')
     ).toContainText("2");
+    await expect(
+        .locator('[data-test="cart-list"] div')
+        .filter({ hasText: "1Sauce Labs Backpackcarry." })
+        .locator('[data-test="item-quantity"]')
+    ).toHaveText("1");
+    await expect(
+      page
+        .locator('[data-test="cart-list"] div')
+        .filter({ hasText: "1Sauce Labs Bike LightA red" })
+        .locator('[data-test="item-quantity"]')
+    ).toHaveText("1");
     await page.locator('[data-test="shopping-cart-link"]').click();
     await expect(page).toHaveURL("https://www.saucedemo.com/cart.html");
     await expect(
