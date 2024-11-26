@@ -18,6 +18,7 @@ test.describe("Sanity-A complete buying experiece", () => {
       page.locator('[data-test="shopping-cart-badge"]')
     ).toContainText("2");
     await expect(
+      page
         .locator('[data-test="cart-list"] div')
         .filter({ hasText: "1Sauce Labs Backpackcarry." })
         .locator('[data-test="item-quantity"]')
